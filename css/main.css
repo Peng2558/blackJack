@@ -29,7 +29,7 @@ html {
     justify-content: center; 
     align-items: center;
   }
-  #board {
+  /*#board {
   
     display: grid;
     grid-template-columns: repeat(4, 20vmin);
@@ -39,21 +39,23 @@ html {
     margin-bottom: 2vmin;
     justify-content: center;
    
-  }
+  }*/
   
-  #board > div {
+  /*#board > div {
     
-    border: 0.1vmin solid grey;
-    background-color: #e63b7a;
-  }
+   border: 0.1vmin solid grey;
+   background-color: #e63b7a;
+
+  }*/
   .center-div {
     display: flex;
     justify-content: center;
+    margin-top:90px;
   }
   
   .button-group {
   
-    margin: auto;
+   
   }
   .button-group button {
    
@@ -61,3 +63,13 @@ html {
     font-size: 25px; 
     margin: 0 5px; 
   }
+  .card-container .card{
+
+       display:inline-block;
+       margin:0;
+       
+  }
+  
+
+
+ 
