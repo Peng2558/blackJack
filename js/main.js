@@ -3,6 +3,9 @@
 	const ranks = ['02', '03', '04', '05', '06', '07', '08', '09', '10', 'J', 'Q', 'K', 'A'];
 	const originalDeck = buildOriginalDeck();
     const h2El = document.querySelector('h2');
+	let isGameOver = false;
+	let isCardAce = false;
+
 	/*----- state variables -----*/
 	let shuffleDeck = getNewShuffledDeck();
     h2El.innerHTML = '0';
@@ -16,7 +19,10 @@
         renderRandomCardInContainer(shuffleDeck, document.getElementById('shuffled-deck-container'));
     });
 	
+    document.getElementById('resetButton').addEventListener('click',function(){
+		resetGame(shuffleDeck, document.getElementById('shuffled-deck-container'));
 
+	});
 	/*----- functions -----*/
 	
 
@@ -37,16 +43,19 @@
 		return deck;
 	  }
 	  function renderRandomCardInContainer(shuffleDeck, container) {
-		if (shuffleDeck.length > 0) {
+		if(isGameOver){return;}
+		else if (shuffleDeck.length > 0) {
 			
 			const randomIndex = Math.floor(Math.random() * shuffleDeck.length);
 			const randomCard = shuffleDeck[randomIndex];
 			const cardHtml = `<div class="card ${randomCard.face}"></div>`;	
 			let cardVal = randomCard.value;
-			h2El.innerHTML  = parseInt(h2El.innerHTML)+cardVal; 	
-			container.innerHTML += cardHtml;
-			shuffleDeck.splice(randomIndex, 1);
+			if(randomCard.value === 11 ){isCardAce = true;}
 			
+			h2El.innerHTML  = parseInt(h2El.innerHTML)+cardVal; 
+			container.innerHTML += cardHtml;			
+			shuffleDeck.splice(randomIndex, 1);
+			validateScore(h2El);
 		}
 	}
 
@@ -60,6 +69,35 @@
 		}
 		return newShuffledDeck;
 	  }
-	 
-	  
+
+	  function resetGame(shuffleDeck, container){
+		container.innerHTML='';
+		h2El.innerHTML='0';
+        isGameOver = false;
+		isCardAce = false;
+	  } 
+	  function validateScore(h2El){        
+	
+        if(h2El.innerHTML == 21 && isCardAce === false)
+		{
+			h2El.innerHTML = h2El.innerHTML +', you won.'; isGameOver = true;
+		}
+		if(h2El.innerHTML == 21 && isCardAce === true)
+		{
+			h2El.innerHTML = h2El.innerHTML +', you won.'; isGameOver = true;
+		}
+		if(h2El.innerHTML > 21 && isCardAce === false)
+		{
+			h2El.innerHTML = h2El.innerHTML +', you lost.';isGameOver = true;
+		}
+		if(h2El.innerHTML > 21 && isCardAce === true)
+		{
+			h2El.innerHTML = h2El.innerHTML-10;
+			if(h2El.innerHTML == 21){h2El.innerHTML +', you won.';isGameOver = true;}
+			if(h2El.innerHTML < 21){isGameOver = false;isCardAce = false}
+			if(h2El.innerHTML > 21){h2El.innerHTML +', you lost.';isGameOver = true;}
+		}
+		
+	  }
+	
 	
