@@ -4,7 +4,7 @@ html {
     background-color:  #006d8f;
   }
   header {
-    font-size: 70px;
+    font-size: 80px;
     text-align: center;
     margin-top: 5vmin;
     margin-bottom: 5vmin;
@@ -25,7 +25,7 @@ html {
     color:#ffe2d6;
     text-align: center;
     margin-top: 0vmin;
-    margin-bottom: -10vmin;
+    margin-bottom: 10vmin;
     justify-content: center; 
     align-items: center;
   }
@@ -48,27 +48,26 @@ html {
 
   }*/
   .center-div {
-    display: flex;
+    display:flex;
     justify-content: center;
-    margin-top:90px;
-  }
-  
-  .button-group {
-  
+    align-items: center;
    
   }
+  
   .button-group button {
    
     margin-top: 5vmin;
     font-size: 25px; 
-    margin: 0 5px; 
+   
+   /* margin: 0 5px; */
   }
-  .card-container .card{
+  /*.card-container {
 
-       display:inline-block;
-       margin:0;
-       
-  }
+       display:inline-block;   
+       justify-content: center; 
+       align-items: center;
+       margin: 0 auto;
+  }*/
   
 
 

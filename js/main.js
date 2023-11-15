@@ -2,17 +2,19 @@
 	const suits = ['s', 'c', 'd', 'h'];
 	const ranks = ['02', '03', '04', '05', '06', '07', '08', '09', '10', 'J', 'Q', 'K', 'A'];
 	const originalDeck = buildOriginalDeck();
-  
+    const h2El = document.querySelector('h2');
 	/*----- state variables -----*/
 	let shuffleDeck = getNewShuffledDeck();
-
+    h2El.innerHTML = '0';
 	/*----- cached elements  -----*/
 	
 
 	
 
 	/*----- event listeners -----*/
-	
+	document.getElementById('drawCardButton').addEventListener('click', function() {
+        renderRandomCardInContainer(shuffleDeck, document.getElementById('shuffled-deck-container'));
+    });
 	
 
 	/*----- functions -----*/
@@ -39,9 +41,12 @@
 			
 			const randomIndex = Math.floor(Math.random() * shuffleDeck.length);
 			const randomCard = shuffleDeck[randomIndex];
-			const cardHtml = `<div class="card ${randomCard.face}"></div>`;	         
+			const cardHtml = `<div class="card ${randomCard.face}"></div>`;	
+			let cardVal = randomCard.value;
+			h2El.innerHTML  = parseInt(h2El.innerHTML)+cardVal; 	
 			container.innerHTML += cardHtml;
 			shuffleDeck.splice(randomIndex, 1);
+			
 		}
 	}
 
@@ -55,5 +60,6 @@
 		}
 		return newShuffledDeck;
 	  }
+	 
 	  
 	
