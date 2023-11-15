@@ -25,7 +25,17 @@ html {
     color:#ffe2d6;
     text-align: center;
     margin-top: 0vmin;
-    margin-bottom: 10vmin;
+    margin-bottom: 0vmin;
+    justify-content: center; 
+    align-items: center;
+  }
+  h3 {
+  
+    font-size: 40px;
+    color:#0a0a0a;
+    text-align: center;
+    margin-top: 0vmin;
+    margin-bottom: 0vmin;
     justify-content: center; 
     align-items: center;
   }

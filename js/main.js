@@ -3,6 +3,9 @@
 	const ranks = ['02', '03', '04', '05', '06', '07', '08', '09', '10', 'J', 'Q', 'K', 'A'];
 	const originalDeck = buildOriginalDeck();
     const h2El = document.querySelector('h2');
+	const h3El = document.querySelector('h3');
+	let playerScore=0;
+    let dealerScore=0;
 	let isGameOver = false;
 	let isCardAce = false;
 
@@ -23,6 +26,12 @@
 		resetGame(shuffleDeck, document.getElementById('shuffled-deck-container'));
 
 	});
+		
+    document.getElementById('stayButton').addEventListener('click',function(){
+		turnPlayer(shuffleDeck, document.getElementById('shuffled-deck-container'));
+
+	});
+
 	/*----- functions -----*/
 	
 
@@ -73,8 +82,13 @@
 	  function resetGame(shuffleDeck, container){
 		container.innerHTML='';
 		h2El.innerHTML='0';
+		h3El.innerHTML = "Player's Turn";
         isGameOver = false;
 		isCardAce = false;
+		alert("PlayerScore:"+playerScore);
+		alert("DealerScore:"+dealerScore);
+		playerScore=0;
+		dealerScore=0;
 	  } 
 	  function validateScore(h2El){        
 	
@@ -99,5 +113,17 @@
 		}
 		
 	  }
+	  function turnPlayer(shuffleDeck, container) {
+		if (h3El.innerHTML == "Player's Turn") {
+			h3El.innerHTML = "Dealer's Turn";
+			playerScore = parseInt(h2El.innerHTML);
+			container.innerHTML = ''			
+			h2El.innerHTML = '0';		
+		}
+		if (h3El.innerHTML == "Dealer's Turn") {
+			dealerScore = parseInt(h2El.innerHTML);
+			
+		}
+	}
 	
 	
