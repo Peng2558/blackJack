@@ -66,18 +66,18 @@ html {
   
   .button-group button {
    
-    margin-top: 5vmin;
+    margin-top: 1vmin;
     font-size: 25px; 
    
    /* margin: 0 5px; */
   }
-  /*.card-container {
+  .card-container {
 
        display:inline-block;   
        justify-content: center; 
        align-items: center;
-       margin: 0 auto;
-  }*/
+      
+  }
   
 
 
