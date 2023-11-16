@@ -1,4 +1,6 @@
-html {
+ 
+  html {
+    
     height: 200%;
     width: 100%;
     background-color:  #006d8f;
@@ -39,24 +41,7 @@ html {
     justify-content: center; 
     align-items: center;
   }
-  /*#board {
-  
-    display: grid;
-    grid-template-columns: repeat(4, 20vmin);
-    grid-template-rows: repeat(2, 30vmin);
-    gap:1vmin;
-    margin-top: 10vmin;
-    margin-bottom: 2vmin;
-    justify-content: center;
-   
-  }*/
-  
-  /*#board > div {
-    
-   border: 0.1vmin solid grey;
-   background-color: #e63b7a;
 
-  }*/
   .center-div {
     display:flex;
     justify-content: center;
@@ -68,15 +53,17 @@ html {
    
     margin-top: 1vmin;
     font-size: 25px; 
-   
-   /* margin: 0 5px; */
+     margin-top: 50px;
   }
-  .card-container {
-
-       display:inline-block;   
-       justify-content: center; 
-       align-items: center;
-      
+ 
+  #shuffled-deck-container {
+    display: flex;
+    font-size: 42px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 5px; 
+    margin-top: 50px;
   }
   
 
