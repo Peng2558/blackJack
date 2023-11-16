@@ -1,6 +1,7 @@
 # BlackJack
 
-![BlackJack Game Screenshot](https://github.com/Peng2558/blackJack/assets/72111623a942cf85-dc96-46f4-a4d9-9817595833f6)
+
+![BlackJack Game Screenshot](https://github.com/Peng2558/blackJack/assets/72111623/869dbbe9-d669-4cca-8b2e-63e16e192536)
 
 ## About the Game
 Welcome to the BlackJack, a classic card game where you compete against the dealer to reach or get closer to a score of 21. Here's how you can dive into the game:
