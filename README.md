@@ -9,7 +9,7 @@ Welcome to the BlackJack, a classic card game where you compete against the deal
 
 **Stay:** When you hit 21 or are close to it, press the "Stay" button. This allows the other player to continue their turn. To see the ultimate result when dealer is done playing, he or she needs to press the "Stay" button to see the game result.
 
-**Ace Scoring:** Aces can be either 1 or 11 points. For you, the player, this value dependes on your cuurent score to avoid exceeding 21. For the dealer, an ace always counts as 11.
+**Ace Scoring:** Aces can be either 1 or 11 points. For you, the player, this value dependes on your current score to avoid exceeding 21. For the dealer, an ace always counts as 11.
 
 **Reset the Game:** You can reset the game at any point by clicking on the "Reset Game" button.
 
