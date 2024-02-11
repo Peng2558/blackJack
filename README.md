@@ -27,7 +27,7 @@ This game is built using:
 **CSS**: Styling the game's appearance.
 
 ## Getting Started
-To start playing BlackJack, simply load the game in your web browser. The interface is intuitive: you have buttons to draw cards, stay, or reset the game. 
+To start playing BlackJack, simply load the game in your web browser by cloning it first and dragging and dropping the index.html in your web browser. The interface is intuitive: you have buttons to draw cards, stay, or reset the game. 
 
 ## Next Steps 
 **Visual Enhancements:** Future updates aim to add more visual components to enhance the gaming experience, making it more immersive and interactive.
